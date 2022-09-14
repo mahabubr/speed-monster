@@ -44,7 +44,7 @@ const typeController = (e) => {
 
 
   if (!newLetterCorrect) {
-    errorCount++
+    errorCount = errorCount + 1
   }
 
   if (newLetterCorrect) {
