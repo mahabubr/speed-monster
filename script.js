@@ -23,8 +23,6 @@ fetch("./texts.json")
 const typeController = (e) => {
   const newLetter = e.key;
 
-  console.log(newLetter)
-
   // Handle backspace press
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
@@ -43,6 +41,11 @@ const typeController = (e) => {
   userText += newLetter;
 
   const newLetterCorrect = validate(newLetter);
+
+
+  if (!newLetterCorrect) {
+    errorCount++
+  }
 
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
@@ -94,7 +97,10 @@ const gameOver = () => {
   errorCount = 0;
   userText = "";
   display.classList.add("inactive");
+
 };
+
+
 
 
 const closeModal = () => {
@@ -118,7 +124,7 @@ const start = () => {
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
-      
+
       clearInterval(startCountdown);
       startTime = new Date().getTime();
     }
