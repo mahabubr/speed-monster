@@ -23,6 +23,8 @@ fetch("./texts.json")
 const typeController = (e) => {
   const newLetter = e.key;
 
+  console.log(newLetter)
+
   // Handle backspace press
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
@@ -93,6 +95,7 @@ const gameOver = () => {
   userText = "";
   display.classList.add("inactive");
 };
+
 
 const closeModal = () => {
   modalBackground.classList.toggle("hidden");
