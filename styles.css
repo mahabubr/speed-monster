@@ -19,6 +19,7 @@ body {
 #question {
   height: 100px;
   display: flex;
+  padding: 30px;
   align-items: center;
   justify-content: center;
   color: white;
@@ -188,6 +189,12 @@ button {
   width: 100%;
   position: fixed;
   top: 0;
+}
+
+@media only screen and (max-width: 992px) {
+  #histories {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media only screen and (max-width: 700px) {

@@ -1,6 +1,6 @@
 const histories = document.getElementById("histories");
 
-function addHistory(questionText, timeTaken, errorCount) {
+function addHistory(questionText, timeTaken, errorCount, userText) {
   const newRow = document.createElement("div");
   newRow.classList.add("card");
 
@@ -11,6 +11,7 @@ function addHistory(questionText, timeTaken, errorCount) {
   <p>You made <span class="bold red">${errorCount + 1}</span> mistakes</p>
   </div>
   `;
+  console.log(userText)
 
   histories.appendChild(newRow);
 

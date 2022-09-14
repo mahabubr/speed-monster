@@ -65,7 +65,6 @@ const validate = (key) => {
   }
   return false;
 };
-
 // FINISHED TYPING
 const gameOver = () => {
   document.removeEventListener("keydown", typeController);
@@ -87,10 +86,14 @@ const gameOver = () => {
     <h1>Finished!</h1>
     <p class="modal-gap">You took: <span class="bold">${timeTaken}</span> seconds</p>
     <p class="modal-gap">You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <p class="modal-gap">You type <span class="bold red">${userText.length}</span> CPS in <span class="bold red">${timeTaken} seconds</p>
     <button onclick="closeModal()">Close</button>
   `;
 
-  addHistory(questionText, timeTaken, errorCount);
+  // console.log(userText.length)
+
+
+  addHistory(questionText, timeTaken, errorCount, userText);
 
   // restart everything
   startTime = null;
