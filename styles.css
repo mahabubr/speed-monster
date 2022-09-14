@@ -171,6 +171,10 @@ button {
   margin-bottom: 30px;
 }
 
+.modal-gap {
+  margin: 10px 0 10px 0;
+}
+
 #modal-background {
   background: rgb(255, 255, 255);
   background: linear-gradient(92.49deg,
