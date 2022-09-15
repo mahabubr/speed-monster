@@ -133,6 +133,7 @@ const start = () => {
     }
     count--;
   }, 1000);
+  countdownOverlay.innerHTML = ''
 };
 
 // START Countdown
